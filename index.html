@@ -4,89 +4,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
+<meta name="theme-color" content="#08080d">
+
 <title>DXR Studios | Independent Creativity</title>
-<meta name="description" content="DXR Studios — Independent Music, Creative Technology and Digital Projects.">
+
+<meta name="description" content="DXR Studios — Independent Music, Creative Technology and Digital Projects by DXR.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
- background:#080808;color:#f5f5f5;
- font-family:Arial,Helvetica,sans-serif;
- line-height:1.6
+:root {
+  --bg: #08080d;
+  --surface: #111119;
+  --accent: #a78bfa;
+  --text: #f5f3fa;
+  --muted: #a09baa;
+  --border: #292633;
 }
-a{color:inherit;text-decoration:none}
-header{
- position:sticky;top:0;z-index:10;
- background:#080808eF;
- backdrop-filter:blur(15px);
- border-bottom:1px solid #252525;
- padding:18px 7%;
- display:flex;justify-content:space-between;
- align-items:center
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.logo{font-size:23px;font-weight:900;letter-spacing:3px}
-.logo span{color:#a78bfa}
-nav{display:flex;gap:25px;font-size:13px;color:#bbb}
-nav a:hover{color:white}
-.hero{
- min-height:85vh;padding:100px 8%;
- display:flex;flex-direction:column;
- justify-content:center;
- background:radial-gradient(ellipse at 80% 40%,#34205c55,transparent 55%),#080808
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
 }
-.tag{color:#b69aff;font-size:12px;letter-spacing:4px;text-transform:uppercase}
-.hero h1{
- font-size:clamp(55px,12vw,120px);
- line-height:1.02;letter-spacing:-5px;
- margin:22px 0
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
 }
-.hero h1 span{color:#a78bfa}
-.hero p{max-width:500px;color:#aaa;font-size:16px}
-.actions{display:flex;gap:14px;margin-top:35px;flex-wrap:wrap}
-.btn{
- padding:13px 23px;border:1px solid #a78bfa;
- border-radius:5px;font-size:13px;
- transition:.2s
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.btn.primary{background:#a78bfa;color:#080808;font-weight:bold}
-.btn:hover{transform:translateY(-3px)}
-section{padding:90px 8%;border-top:1px solid #222}
-.eyebrow{color:#a78bfa;letter-spacing:3px;font-size:11px}
-h2{font-size:clamp(30px,5vw,48px);margin:12px 0 22px}
-.muted{color:#999;max-width:650px}
-.grid{
- display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
- gap:18px;margin-top:35px
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,13,.94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+  padding: 17px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.card{
- padding:28px;border:1px solid #292929;
- border-radius:9px;background:#111;
- transition:.25s
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 3px;
 }
-.card:hover{border-color:#a78bfa;transform:translateY(-4px)}
-.card h3{margin:12px 0;font-size:20px}
-.card p{font-size:14px;color:#999}
-.symbol{font-size:26px;color:#b69aff}
-.artist{
- margin-top:35px;padding:35px;
- border:1px solid #333;border-radius:10px;
- background:linear-gradient(120deg,#211637,#101010 70%)
+
+.logo span {
+  color: var(--accent);
 }
-.artist h3{font-size:35px;margin:10px 0}
-footer{
- padding:35px 8%;border-top:1px solid #222;
- display:flex;justify-content:space-between;
- flex-wrap:wrap;gap:15px;color:#888;font-size:12px
+
+nav {
+  display: flex;
+  gap: 23px;
+  font-size: 13px;
+  color: var(--muted);
 }
-footer strong{color:white}
-@media(max-width:650px){
- header{padding:15px 5%;flex-wrap:wrap;gap:12px}
- nav{width:100%;overflow-x:auto;gap:20px;padding-bottom:4px}
- .hero{min-height:75vh;padding:80px 6%}
- .hero h1{letter-spacing:-3px}
- section{padding:70px 6%}
+
+nav a:hover,
+.social a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  min-height: 88vh;
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 80% 40%, #54358b40, transparent 55%),
+    var(--bg);
+}
+
+.tag,
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 12vw, 120px);
+  line-height: 1.04;
+  letter-spacing: -5px;
+  margin: 24px 0;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  font-size: 13px;
+  transition: .25s;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #08080d;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 25px #a78bfa30;
+}
+
+section {
+  padding: 90px 8%;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin: 12px 0 22px;
+  line-height: 1.2;
+}
+
+.muted {
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  transition: .25s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.symbol {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+.artist {
+  margin-top: 35px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: linear-gradient(120deg, #24183c, #111119);
+}
+
+.artist h3 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 17px;
+  font-size: 13px;
+}
+
+.social a {
+  color: var(--accent);
+}
+
+footer {
+  padding: 35px 8%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer strong {
+  color: white;
+  letter-spacing: 2px;
+}
+
+@media(max-width:650px) {
+  header {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav {
+    width: 100%;
+    overflow-x: auto;
+    gap: 20px;
+    white-space: nowrap;
+    padding-bottom: 5px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 80px 6%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  section {
+    padding: 70px 6%;
+  }
+
+  .artist {
+    padding: 25px;
+  }
 }
 </style>
 </head>
@@ -94,190 +273,334 @@ footer strong{color:white}
 <body>
 
 <header>
- <a href="#home" class="logo">DXR<span>.</span></a>
- <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#artist">Artist</a>
-  <a href="#music">Music</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
- </nav>
+  <a href="#home" class="logo">DXR<span>.</span></a>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#artist">Artist</a>
+    <a href="#music">Music</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
 
+<!-- HOME -->
+
 <div class="hero" id="home">
- <div class="tag">Independent Creative Studio</div>
- <h1>CREATE.<br>INSPIRE.<br><span>EVOLVE.</span></h1>
- <p>
-  An independent creative space where music,
-  technology and imagination come together.
- </p>
- <div class="actions">
-  <a class="btn primary" href="#about">Discover DXR</a>
-  <a class="btn" href="#music">Explore Music ↗</a>
- </div>
+
+  <div class="tag">
+    Independent Creative Studio
+  </div>
+
+  <h1>
+    CREATE.<br>
+    INSPIRE.<br>
+    <span>EVOLVE.</span>
+  </h1>
+
+  <p>
+    An independent creative space where music,
+    technology and imagination come together.
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="#about">
+      Discover DXR
+    </a>
+
+    <a class="btn" href="#music">
+      Explore Music ↗
+    </a>
+  </div>
+
 </div>
 
+<!-- ABOUT -->
+
 <section id="about">
- <div class="eyebrow">01 / ABOUT US</div>
- <h2>Beyond the ordinary.</h2>
- <p class="muted">
-  DXR Studios is an independent creative initiative
-  exploring music production, digital experiences,
-  creative technology and innovative projects.
-  We believe in creating something meaningful,
-  one idea at a time.
- </p>
+
+  <div class="eyebrow">01 / ABOUT US</div>
+
+  <h2>Beyond the ordinary.</h2>
+
+  <p class="muted">
+    DXR Studios is an independent creative initiative
+    exploring music production, digital experiences,
+    creative technology and innovative projects.
+
+    We believe in creating something meaningful,
+    one idea at a time.
+  </p>
+
 </section>
+
+<!-- ARTIST -->
 
 <section id="artist">
- <div class="eyebrow">02 / THE ARTIST</div>
- <h2>Meet the creator.</h2>
- <div class="artist">
-  <div class="eyebrow">SINGER • SONGWRITER • PRODUCER</div>
-  <h3>DXR</h3>
-  <p class="muted">
-   Independent artist and music producer.
-   Creating sounds, expressing emotions and
-   building a unique musical identity.
-  </p>
- </div>
+
+  <div class="eyebrow">02 / THE ARTIST</div>
+
+  <h2>Meet the creator.</h2>
+
+  <div class="artist">
+
+    <div class="eyebrow">
+      SINGER • SONGWRITER • PRODUCER
+    </div>
+
+    <h3>DXR</h3>
+
+    <p class="muted">
+      Independent artist and music producer.
+      Creating sounds, expressing emotions and
+      building a unique musical identity.
+    </p>
+
+    <div class="social">
+      <a href="https://www.instagram.com/debasiishray_dxr?dlrf=ZnEwYjAya3BjbjJh"
+         target="_blank" rel="noopener">
+        Instagram ↗
+      </a>
+
+      <a href="https://youtube.com/@dxr_music_studios?si=sxXS7wI2vsyrsiSW"
+         target="_blank" rel="noopener">
+        YouTube ↗
+      </a>
+
+      <a href="https://www.facebook.com/share/1EB3Uj8NQB/"
+         target="_blank" rel="noopener">
+        Facebook ↗
+      </a>
+    </div>
+
+  </div>
+
 </section>
+
+<!-- MUSIC -->
 
 <section id="music">
- <div class="eyebrow">03 / MUSIC</div>
- <h2>Sound meets emotion.</h2>
- <p class="muted">
-  Original music, releases and upcoming creations
-  from DXR Studios.
- </p>
- <div class="grid">
-  <div class="card">
-   <div class="symbol">♫</div>
-   <h3>Original Music</h3>
-   <p>Discover original tracks and independent releases.</p>
-  </div>
-  <div class="card">
-   <div class="symbol">♪</div>
-   <h3>Production</h3>
-   <p>Beats, melodies, sound design and music production.</p>
-  </div>
-  <div class="card">
-   <div class="symbol">◉</div>
-   <h3>Upcoming Releases</h3>
-   <p>More music and creative experiments are on the way.</p>
-  </div>
- </div>
-</section>
 
-<section id="projects">
- <div class="eyebrow">04 / PROJECTS</div>
- <h2>Ideas into reality.</h2>
- <div class="grid">
-  <div class="card">
-   <div class="symbol">⌘</div>
-   <h3>Digital Experiences</h3>
-   <p>Websites, creative platforms and digital solutions.</p>
-  </div>
-  <div class="card">
-   <div class="symbol">⚡</div>
-   <h3>Creative Technology</h3>
-   <p>Exploring electronics, software and innovation.</p>
-  </div>
-  <div class="card">
-   <div class="symbol">✦</div>
-   <h3>Visual Creativity</h3>
-   <p>Design, branding and digital media experiments.</p>
-  </div>
- </div>
-</section>
+  <div class="eyebrow">03 / MUSIC</div>
 
+  <h2>Sound meets emotion.</h2>
 
-<section id="contact">
-  <div class="eyebrow">05 / GET IN TOUCH</div>
-  <h2>Let's connect.</h2>
   <p class="muted">
-    For business enquiries, music collaborations,
-    partnerships and creative opportunities,
-    reach out to DXR.
+    Original music, releases and upcoming creations
+    from DXR.
   </p>
 
   <div class="grid">
 
     <div class="card">
-      <div class="symbol">✉</div>
-      <h3>Business Enquiries</h3>
-      <p>Official email contact</p>
-      <a class="btn primary"
-         href="mailto:dxr.debasish@gmail.com">
-         Send Email ↗
-      </a>
-    </div>
-
-    <div class="card">
-      <div class="symbol">☏</div>
-      <h3>WhatsApp</h3>
-      <p>Connect directly with DXR</p>
-      <a class="btn"
-         href="https://wa.me/message/XK5KWCPS3I55P1"
-         target="_blank" rel="noopener">
-         Message DXR ↗
-      </a>
-    </div>
-
-    <div class="card">
       <div class="symbol">♫</div>
-      <h3>Debasish / DXR</h3>
-      <p>Personal artist profiles</p>
+      <h3>Original Music</h3>
       <p>
-        <a href="https://www.instagram.com/debasiishray_dxr/"
-           target="_blank" rel="noopener">Instagram</a>
-        ·
-        <a href="https://youtube.com/@dxr_music_studios"
-           target="_blank" rel="noopener">YouTube</a>
-        ·
-        <a href="https://www.facebook.com/share/1EB3Uj8NQB/"
-           target="_blank" rel="noopener">Facebook</a>
+        Discover original tracks and independent releases.
       </p>
     </div>
 
     <div class="card">
-      <div class="symbol">◈</div>
-      <h3>DXR Studios</h3>
-      <p>Official studio channels</p>
+      <div class="symbol">♪</div>
+      <h3>Music Production</h3>
       <p>
-        <a href="https://www.instagram.com/dxr.studios/"
-           target="_blank" rel="noopener">Instagram</a>
-        ·
-        <a href="https://youtube.com/@dxr-studios-official"
-           target="_blank" rel="noopener">YouTube</a>
+        Beats, melodies, sound design and production.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">◉</div>
+      <h3>Upcoming Releases</h3>
+      <p>
+        New music and creative experiments are on the way.
       </p>
     </div>
 
   </div>
+
+  <div class="actions">
+    <a class="btn primary"
+       href="https://youtube.com/@dxr_music_studios?si=sxXS7wI2vsyrsiSW"
+       target="_blank" rel="noopener">
+      Listen on YouTube ↗
+    </a>
+  </div>
+
 </section>
 
- <div class="eyebrow">05 / CONNECT</div>
- <h2>Let's create something.</h2>
- <p class="muted">
-  For collaborations, business enquiries and creative
-  opportunities, connect with DXR Studios.
- </p>
- <div class="actions">
-  <a class="btn primary" href="mailto:contact@dxr-studios.example">
-   Email Us ↗
-  </a>
- </div>
+<!-- PROJECTS -->
+
+<section id="projects">
+
+  <div class="eyebrow">04 / PROJECTS</div>
+
+  <h2>Ideas into reality.</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="symbol">⌘</div>
+      <h3>Digital Experiences</h3>
+      <p>
+        Websites, creative platforms and digital solutions.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">⚡</div>
+      <h3>Creative Technology</h3>
+      <p>
+        Exploring electronics, software and innovation.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">✦</div>
+      <h3>Visual Creativity</h3>
+      <p>
+        Design, branding and digital media experiments.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="eyebrow">05 / GET IN TOUCH</div>
+
+  <h2>Let's connect.</h2>
+
+  <p class="muted">
+    For business enquiries, music collaborations,
+    partnerships and creative opportunities,
+    connect with DXR Studios.
+  </p>
+
+  <div class="grid">
+
+    <!-- EMAIL -->
+
+    <div class="card">
+
+      <div class="symbol">✉</div>
+
+      <h3>Business Enquiries</h3>
+
+      <p>Official business email</p>
+
+      <div class="actions">
+        <a class="btn primary"
+           href="mailto:dxr.debasish@gmail.com">
+          Send Email ↗
+        </a>
+      </div>
+
+    </div>
+
+    <!-- WHATSAPP -->
+
+    <div class="card">
+
+      <div class="symbol">☏</div>
+
+      <h3>WhatsApp</h3>
+
+      <p>Connect directly with DXR</p>
+
+      <div class="actions">
+        <a class="btn"
+           href="https://wa.me/message/XK5KWCPS3I55P1"
+           target="_blank" rel="noopener">
+          Message DXR ↗
+        </a>
+      </div>
+
+    </div>
+
+    <!-- PERSONAL BRAND -->
+
+    <div class="card">
+
+      <div class="symbol">♫</div>
+
+      <h3>Debasish / DXR</h3>
+
+      <p>Personal artist profiles</p>
+
+      <div class="social">
+
+        <a href="https://www.instagram.com/debasiishray_dxr?dlrf=ZnEwYjAya3BjbjJh"
+           target="_blank" rel="noopener">
+          Instagram ↗
+        </a>
+
+        <a href="https://youtube.com/@dxr_music_studios?si=sxXS7wI2vsyrsiSW"
+           target="_blank" rel="noopener">
+          YouTube ↗
+        </a>
+
+        <a href="https://www.facebook.com/share/1EB3Uj8NQB/"
+           target="_blank" rel="noopener">
+          Facebook ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- OFFICIAL STUDIO -->
+
+    <div class="card">
+
+      <div class="symbol">◈</div>
+
+      <h3>DXR Studios</h3>
+
+      <p>Official studio channels</p>
+
+      <div class="social">
+
+        <a href="https://www.instagram.com/dxr.studios/"
+           target="_blank" rel="noopener">
+          Instagram ↗
+        </a>
+
+        <a href="https://youtube.com/@dxr-studios-official?si=aYF3kksAczWp_k6b"
+           target="_blank" rel="noopener">
+          YouTube ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
- <strong>DXR STUDIOS.</strong>
- <span>Independent creativity. Endless possibilities.</span>
- <span>© 2026 DXR Studios</span>
+
+  <strong>DXR STUDIOS.</strong>
+
+  <span>
+    Independent creativity. Endless possibilities.
+  </span>
+
+  <span>
+    © 2026 DXR Studios. All rights reserved.
+  </span>
+
 </footer>
 
 </body>
