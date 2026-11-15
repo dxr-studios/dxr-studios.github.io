@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<title>DXR Studios | Independent Creativity</title>
+<meta name="description" content="DXR Studios — Independent Music, Creative Technology and Digital Projects.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:#080808;color:#f5f5f5;
+ font-family:Arial,Helvetica,sans-serif;
+ line-height:1.6
+}
+a{color:inherit;text-decoration:none}
+header{
+ position:sticky;top:0;z-index:10;
+ background:#080808eF;
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid #252525;
+ padding:18px 7%;
+ display:flex;justify-content:space-between;
+ align-items:center
+}
+.logo{font-size:23px;font-weight:900;letter-spacing:3px}
+.logo span{color:#a78bfa}
+nav{display:flex;gap:25px;font-size:13px;color:#bbb}
+nav a:hover{color:white}
+.hero{
+ min-height:85vh;padding:100px 8%;
+ display:flex;flex-direction:column;
+ justify-content:center;
+ background:radial-gradient(ellipse at 80% 40%,#34205c55,transparent 55%),#080808
+}
+.tag{color:#b69aff;font-size:12px;letter-spacing:4px;text-transform:uppercase}
+.hero h1{
+ font-size:clamp(55px,12vw,120px);
+ line-height:1.02;letter-spacing:-5px;
+ margin:22px 0
+}
+.hero h1 span{color:#a78bfa}
+.hero p{max-width:500px;color:#aaa;font-size:16px}
+.actions{display:flex;gap:14px;margin-top:35px;flex-wrap:wrap}
+.btn{
+ padding:13px 23px;border:1px solid #a78bfa;
+ border-radius:5px;font-size:13px;
+ transition:.2s
+}
+.btn.primary{background:#a78bfa;color:#080808;font-weight:bold}
+.btn:hover{transform:translateY(-3px)}
+section{padding:90px 8%;border-top:1px solid #222}
+.eyebrow{color:#a78bfa;letter-spacing:3px;font-size:11px}
+h2{font-size:clamp(30px,5vw,48px);margin:12px 0 22px}
+.muted{color:#999;max-width:650px}
+.grid{
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:18px;margin-top:35px
+}
+.card{
+ padding:28px;border:1px solid #292929;
+ border-radius:9px;background:#111;
+ transition:.25s
+}
+.card:hover{border-color:#a78bfa;transform:translateY(-4px)}
+.card h3{margin:12px 0;font-size:20px}
+.card p{font-size:14px;color:#999}
+.symbol{font-size:26px;color:#b69aff}
+.artist{
+ margin-top:35px;padding:35px;
+ border:1px solid #333;border-radius:10px;
+ background:linear-gradient(120deg,#211637,#101010 70%)
+}
+.artist h3{font-size:35px;margin:10px 0}
+footer{
+ padding:35px 8%;border-top:1px solid #222;
+ display:flex;justify-content:space-between;
+ flex-wrap:wrap;gap:15px;color:#888;font-size:12px
+}
+footer strong{color:white}
+@media(max-width:650px){
+ header{padding:15px 5%;flex-wrap:wrap;gap:12px}
+ nav{width:100%;overflow-x:auto;gap:20px;padding-bottom:4px}
+ .hero{min-height:75vh;padding:80px 6%}
+ .hero h1{letter-spacing:-3px}
+ section{padding:70px 6%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <a href="#home" class="logo">DXR<span>.</span></a>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#artist">Artist</a>
+  <a href="#music">Music</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+ <div class="tag">Independent Creative Studio</div>
+ <h1>CREATE.<br>INSPIRE.<br><span>EVOLVE.</span></h1>
+ <p>
+  An independent creative space where music,
+  technology and imagination come together.
+ </p>
+ <div class="actions">
+  <a class="btn primary" href="#about">Discover DXR</a>
+  <a class="btn" href="#music">Explore Music ↗</a>
+ </div>
+</div>
+
+<section id="about">
+ <div class="eyebrow">01 / ABOUT US</div>
+ <h2>Beyond the ordinary.</h2>
+ <p class="muted">
+  DXR Studios is an independent creative initiative
+  exploring music production, digital experiences,
+  creative technology and innovative projects.
+  We believe in creating something meaningful,
+  one idea at a time.
+ </p>
+</section>
+
+<section id="artist">
+ <div class="eyebrow">02 / THE ARTIST</div>
+ <h2>Meet the creator.</h2>
+ <div class="artist">
+  <div class="eyebrow">SINGER • SONGWRITER • PRODUCER</div>
+  <h3>DXR</h3>
+  <p class="muted">
+   Independent artist and music producer.
+   Creating sounds, expressing emotions and
+   building a unique musical identity.
+  </p>
+ </div>
+</section>
+
+<section id="music">
+ <div class="eyebrow">03 / MUSIC</div>
+ <h2>Sound meets emotion.</h2>
+ <p class="muted">
+  Original music, releases and upcoming creations
+  from DXR Studios.
+ </p>
+ <div class="grid">
+  <div class="card">
+   <div class="symbol">♫</div>
+   <h3>Original Music</h3>
+   <p>Discover original tracks and independent releases.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">♪</div>
+   <h3>Production</h3>
+   <p>Beats, melodies, sound design and music production.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">◉</div>
+   <h3>Upcoming Releases</h3>
+   <p>More music and creative experiments are on the way.</p>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="eyebrow">04 / PROJECTS</div>
+ <h2>Ideas into reality.</h2>
+ <div class="grid">
+  <div class="card">
+   <div class="symbol">⌘</div>
+   <h3>Digital Experiences</h3>
+   <p>Websites, creative platforms and digital solutions.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">⚡</div>
+   <h3>Creative Technology</h3>
+   <p>Exploring electronics, software and innovation.</p>
+  </div>
+  <div class="card">
+   <div class="symbol">✦</div>
+   <h3>Visual Creativity</h3>
+   <p>Design, branding and digital media experiments.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="eyebrow">05 / CONNECT</div>
+ <h2>Let's create something.</h2>
+ <p class="muted">
+  For collaborations, business enquiries and creative
+  opportunities, connect with DXR Studios.
+ </p>
+ <div class="actions">
+  <a class="btn primary" href="mailto:contact@dxr-studios.example">
+   Email Us ↗
+  </a>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <strong>DXR STUDIOS.</strong>
+ <span>Independent creativity. Endless possibilities.</span>
+ <span>© 2026 DXR Studios</span>
+</footer>
+
+</body>
+</html>
